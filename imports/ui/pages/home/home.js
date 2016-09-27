@@ -16,4 +16,12 @@ export default angular.module(name, [angularMeteor, uiRouter])
 })
 .config(config);
 
-function config() {}
+function config($stateProvider) {
+  'ngInject';
+
+  $stateProvider
+  .state('home', {
+    url: '/',
+    template: '<home></home>'
+  })
+}
