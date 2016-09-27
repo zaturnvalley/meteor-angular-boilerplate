@@ -3,8 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import { Meteor } from 'meteor/meteor';
 
+import { name as Bootstrap } from '../imports/ui/bootstrap.js';
+
 function onReady() {
-  angular.bootstrap(document, [], {strictDi: true});
+  angular.bootstrap(document, [Bootstrap], {strictDi: true});
 }
 
 if(Meteor.isCordova) {
