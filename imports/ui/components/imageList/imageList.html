@@ -1,3 +1,13 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form ng-submit="imageList.submitImage()">
+      <div class="form-group">
+        <input type="text" ng-model="imageList.imageUrl" placeholder="Submit Image Url">
+        <input type="submit" class="btn btn-info">
+      </div>
+    </form>
+  </div>
+</div>
 <div class="row" ng-repeat="image in imageList.images">
   <div class="col-xs-12">
     <img class="img-responsive" ng-src="{{image.url}}">

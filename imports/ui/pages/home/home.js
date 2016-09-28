@@ -39,7 +39,7 @@ class Home {
 
 const name = 'home';
 
-export default angular.module(name, [angularMeteor, uiRouter])
+export default angular.module(name, [angularMeteor, uiRouter, ImageList])
 .component(name, {
   template,
   controllerAs: name,

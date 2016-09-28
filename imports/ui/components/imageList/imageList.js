@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Images } from '../../../api/images';
+import { Meteor } from 'meteor/meteor';
 
 import template from './imageList.html';
 
@@ -12,11 +13,17 @@ class ImageList {
 
     this.subscribe('images');
 
+    this.imageUrl = '';
+
     this.helpers({
       images() {
         return Images.find({});
       }
     });
+  }
+
+  submitImage() {
+    Meteor.call('images.insert', this.imageUrl);
   }
 }
 
