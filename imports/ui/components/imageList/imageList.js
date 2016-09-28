@@ -1,5 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
+import { Images } from '../../../api/images';
 
 import template from './imageList.html';
 
