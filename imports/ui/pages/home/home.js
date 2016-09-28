@@ -4,7 +4,36 @@ import uiRouter from 'angular-ui-router';
 
 import template from './home.html';
 
-class Home {}
+class Home {
+  constructor($reactive, $scope) {
+    'ngInject';
+
+    $reactive(this).attach($scope);
+
+    // this.subscribe('images');
+
+    // this.helpers({
+    //   images() {
+    //     return Images.find({})
+    //   }
+    // });
+
+    this.name = 'Zach';
+    this.num = 0;
+  }
+  printName() {
+    this.num += 1;
+    console.log(this.name + ' ' + this.num);
+  }
+  mult() {
+    this.num *= 2;
+    console.log(this.name + ' ' + this.num);
+  }
+  div() {
+    this.num /= 2;
+    console.log(this.name + ' ' + this.num);
+  }
+}
 
 const name = 'home';
 

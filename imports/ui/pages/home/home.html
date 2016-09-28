@@ -1,1 +1,8 @@
 <h1>Home</h1>
+<p>Hello {{home.name}}</p>
+<button ng-click="home.printName()">Click to Console Log</button>
+<button ng-click="home.mult()">Click to Multiply</button>
+<button ng-click="home.div()">Click to Divide</button>
+<h1>{{home.num}}</h1>
+
+<div class="well" ng-repeat="image in home.images"></div>
